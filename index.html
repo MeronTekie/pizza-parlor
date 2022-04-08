@@ -21,8 +21,11 @@
   <body>
     <div class="container">
       <form id="pizza-parlor">
-        <h1>Welcome To Pizza Parlor</h1>
+        <h1 class="jumbotron">Welcome To Pizza Parlor</h1>
+        <label for="pizza-size">Your name or nickname: </label>
+        <input type="text" class="form-control" />
         <label for="pizza-size">Pick Your Size: </label>
+
         <select id="pizza-size" class="form-control">
           <option value="1">Regular</option>
           <option value="2">Large</option>
@@ -50,7 +53,9 @@
           <option value="3">Pineapple</option>
         </select>
         <br />
-        <button type="sybmit" class="btn btn-green">Place Order!</button>
+        <button type="sybmit" class="btn btn-success btn-lg">
+          Place Order!
+        </button>
       </form>
       <div></div>
     </div>
