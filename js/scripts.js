@@ -18,5 +18,13 @@ Pizza.prototype.pizzaSizePrice = function () {
   return pizzaPrice;
 };
 
+Pizza.prototype.toppingsPrice = function (numberOfToppings) {
+  let eachToppingPrice = 1.99;
+  let toppingPrice = numberOfToppings * eachToppingPrice;
+  return toppingPrice;
+};
+
 let myPizza = new Pizza("Meron", "Regular", ["pineapple", "cheese"]);
 console.log(myPizza.pizzaSizePrice(this.pizza));
+
+console.log(myPizza.toppingsPrice(myPizza.toppings.length));
