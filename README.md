@@ -29,7 +29,7 @@ The website is built to give customers a choice of their size of Pizza and it ch
 
 ## Known Bugs
 
-- Issue in overwriting the previous existing output unless page is refreshed.
+- No known bugs
 
 ## License
 
