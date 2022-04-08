@@ -2,7 +2,7 @@
 
 #### Meron G.Tekie
 
-#### This web page is a Pizza place where its price depends upon your choice of size and the number of toppings you the customer selects
+#### This web page is a Pizza place where its price depends upon your choice of size and the number of toppings you select
 
 ## Technologies Used
 
