@@ -8,13 +8,12 @@
       crossorigin="anonymous"
     />
     <link href="css/styles.css" rel="stylesheet" type="text/css" />
-
-    <script src="js/scripts.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.6.0.js"
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
       crossorigin="anonymous"
     ></script>
+    <script src="js/scripts.js"></script>
 
     <title>pizza Parlor</title>
   </head>
@@ -23,41 +22,42 @@
       <form id="pizza-parlor">
         <h1 class="jumbotron">Welcome To Pizza Parlor</h1>
         <label for="pizza-size">Your name or nickname: </label>
-        <input type="text" class="form-control" />
+        <input id="name" type="text" class="form-control" />
         <label for="pizza-size">Pick Your Size: </label>
 
         <select id="pizza-size" class="form-control">
-          <option value="1">Regular</option>
-          <option value="2">Large</option>
-          <option value="3">X-Large</option>
+          <option value="Regular">Regular</option>
+          <option value="Large">Large</option>
+          <option value="X-large">X-Large</option>
         </select>
         <label for="pizza-size">Pick Your first topping: </label>
         <select id="first-topping" class="form-control">
-          <option value="0">No-topping</option>
-          <option value="1">Pepporoni</option>
-          <option value="2">Cheese</option>
-          <option value="3">Pineapple</option>
+          <option disabled selected>Select a topping</option>
+          <option value="No-topping">No-topping</option>
+          <option value="Pepporoni">Pepporoni</option>
+          <option value="Cheese">Cheese</option>
+          <option value="Pineapple">Pineapple</option>
         </select>
         <label for="pizza-size">Pick your second topping: </label>
         <select id="second-topping" class="form-control">
-          <option value="0">No-topping</option>
-          <option value="1">Pepporoni</option>
-          <option value="2">Cheese</option>
-          <option value="3">Pineapple</option>
+          <option value="No-topping">No-topping</option>
+          <option value="Pepporoni">Pepporoni</option>
+          <option value="Cheese">Cheese</option>
+          <option value="Pineapple">Pineapple</option>
         </select>
         <label for="pizza-size">Pick your third topping: </label>
-        <select id="thid-tooping" class="form-control">
-          <option value="0">No-topping</option>
-          <option value="1">Pepporoni</option>
-          <option value="2">Cheese</option>
-          <option value="3">Pineapple</option>
+        <select id="third-topping" class="form-control">
+          <option value="No-topping">No-topping</option>
+          <option value="Pepporoni">Pepporoni</option>
+          <option value="Cheese">Cheese</option>
+          <option value="Pineapple">Pineapple</option>
         </select>
         <br />
         <button type="sybmit" class="btn btn-success btn-lg">
           Place Order!
         </button>
       </form>
-      <div></div>
     </div>
+    <div id="output" class="hidden"></div>
   </body>
 </html>

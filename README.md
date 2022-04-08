@@ -46,11 +46,17 @@ Expected Output: { toppings: ["anchovies", "pineapple"], size: "Large" }
 ## Describe: myPizza.pizzaSizePrice()
 
 -Test: "It should return the price of the pizza according the size
-Code: = myPizza.pizzaSizePrice(this.pizza);
-Expected Output: pizzaPrice = if this.pizza is regular: 7.99,if this.pizza is large: 8.99 and if this.pizza is X-large: 10.99;
+Code: = myPizza.pizzaSizePrice(Large);
+Expected Output: pizzaPrice = large: 8.99;
 
 ## Describe: myPizza.toppingsPrice();
 
--Test: "It should return the total price of the topping according the number of toppings(In this case the number of toppings is the array length of the toppings array)
-Code: = myPizza.toppingsPrice(myPizza.toppings.length)
-Expected Output: pizzaPrice = if array length is 1: 1.99,if array length is 2: 3.98,if array length is 3: 5.97,
+-Test: "It should return the total price of the topping according the number of toppings multiplied by 1.99
+Code: = myPizza.toppingsPrice(3)
+Expected Output: pizzaPrice = : 5.97,
+
+## Describe: totalPrice()
+
+-Test: "It should return the total price of the Pizza
+Code: = totalPrice(7.99,1.99)
+Expected Output: pizzaPrice = 9.98;

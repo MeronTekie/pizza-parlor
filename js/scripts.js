@@ -7,24 +7,91 @@ function Pizza(name, pizza, toppings) {
 }
 
 Pizza.prototype.pizzaSizePrice = function () {
-  let pizzaPrice = 0;
+  let pizzaPrice;
   if (this.pizza == "Regular") {
     pizzaPrice = 7.99;
   } else if (this.pizza == "Large") {
     pizzaPrice = 8.99;
   } else {
-    pizzaPrice == 10.99;
+    pizzaPrice = 10.99;
   }
   return pizzaPrice;
 };
 
-Pizza.prototype.toppingsPrice = function (numberOfToppings) {
+Pizza.prototype.toppingsPrice = function (toppings) {
+  let numberOfToppings = 0;
   let eachToppingPrice = 1.99;
+  for (let i = 0; i < toppings.length; i++) {
+    if (toppings[i] != "No-topping") {
+      numberOfToppings += 1;
+    } else {
+      numberOfToppings;
+    }
+  }
   let toppingPrice = numberOfToppings * eachToppingPrice;
   return toppingPrice;
 };
 
-let myPizza = new Pizza("Meron", "Regular", ["pineapple", "cheese"]);
-console.log(myPizza.pizzaSizePrice(this.pizza));
+Pizza.prototype.totalPrice = function (pizzaPrice, toppingPrice) {
+  let total = pizzaPrice + toppingPrice;
+  return total;
+};
 
-console.log(myPizza.toppingsPrice(myPizza.toppings.length));
+//User Interface Logic
+$(document).ready(function () {
+  $("form#pizza-parlor").submit(function (event) {
+    event.preventDefault();
+    const customerName = $("input#name").val();
+    const pizzaSize = $("select#pizza-size").val();
+    const firstTopping = $("select#first-topping").val();
+    const secondTopping = $("select#second-topping").val();
+    const thirdTopping = $("select#third-topping").val();
+
+    const toppings = [firstTopping, secondTopping, thirdTopping];
+    const myPizza = new Pizza(customerName, pizzaSize, toppings);
+
+    let toppingTotal = myPizza.toppingsPrice(myPizza.toppings);
+    let pizzaPrice = myPizza.pizzaSizePrice(this.pizza);
+    let totalPrice = myPizza.totalPrice(pizzaPrice, toppingTotal);
+    if (
+      customerName == "" &&
+      !pizzaSize &&
+      !firstTopping &&
+      !secondTopping &&
+      !thirdTopping
+    ) {
+      alert("Please make sure you fill each space before ordering!");
+    } else {
+      $("div#output").removeClass();
+      $("#output").html(
+        "Your total is : " +
+          totalPrice +
+          "\n" +
+          "Enjoy Your Pizza .We hope to see you soon!"
+      );
+    }
+  });
+});
+
+// let topping = function (topping) {
+//   let toppingArray = [];
+//   if (firstTopping != "No-topping") {
+//     toppingArray.push(topping);
+//   }
+
+//   return toppingArray;
+// };
+
+// console.log(topping($("select#first-topping").val()));
+
+// let myPizza = new Pizza("Meron", "Lar", ["pineapple", "cheese", "pepperoni"]);
+// console.log(myPizza.pizzaSizePrice(this.pizza));
+
+// console.log(myPizza.toppingsPrice(myPizza.toppings.length));
+
+// console.log(
+//   totalPrice(
+//     myPizza.pizzaSizePrice(this.pizza),
+//     myPizza.toppingsPrice(myPizza.toppings.length)
+//   )
+// );
