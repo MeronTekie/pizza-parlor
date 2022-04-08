@@ -42,3 +42,9 @@ This website is built to return the value of a given number in to count from zer
 -Test: "It should return an object of three properties of customer's name choice of pizza size and toppings
 Code: const myPizza = new Pizza (["pepperoni","cheese","pineapple"],"Large");
 Expected Output: { toppings: ["anchovies", "pineapple"], size: "Large" }
+
+## Describe: myPizza.pizzaSizePrice()
+
+-Test: "It should return the rice of the size according the size
+Code: = myPizza.pizzaSizePrice(this.pizza);
+Expected Output: pizzaPrice = if this.pizza is regular: 7.99,if this.pizza is large: 8.99 and if this.pizza is X-large: 10.99;
