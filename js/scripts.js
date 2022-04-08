@@ -58,9 +58,12 @@ $(document).ready(function () {
     } else {
       $("div#output").removeClass();
       $("#output").html(
-        "Your total is : " +
+        "Hi " +
+          customerName +
+          " Your total is : " +
           totalPrice +
-          "\n" +
+          " USD" +
+          "<br>" +
           "Enjoy Your Pizza .We hope to see you soon!"
       );
     }
