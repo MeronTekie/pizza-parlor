@@ -53,13 +53,16 @@ $(document).ready(function () {
     let toppingTotal = myPizza.toppingsPrice(myPizza.toppings);
     let pizzaPrice = myPizza.pizzaSizePrice(this.pizza);
     let totalPrice = myPizza.totalPrice(pizzaPrice, toppingTotal);
-
-    $("div#output").removeClass();
-    $("#output").html(
-      "Your total is : " +
-        totalPrice +
-        "\n" +
-        "Enjoy Your Pizza .We hope to see you soon!"
-    );
+    if (customerName === "") {
+      alert("Enter your name to start with your order!");
+    } else {
+      $("div#output").removeClass();
+      $("#output").html(
+        "Your total is : " +
+          totalPrice +
+          "\n" +
+          "Enjoy Your Pizza .We hope to see you soon!"
+      );
+    }
   });
 });

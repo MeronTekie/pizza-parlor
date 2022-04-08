@@ -19,8 +19,18 @@
   </head>
   <body>
     <div class="container">
+      <div class="row">
+       
+        <div class="col-5">
+          <img src="img/images.jpeg" alt="images" />
+        </div>
+        <div class="col-7">
+          <h1 class="jumbotron">Welcome To Pizza-Parlor!</h1>
+        </div>
+      </div>
+      <div class="row">
+      <div class="col-5">
       <form id="pizza-parlor">
-        <h1 class="jumbotron">Welcome To Pizza Parlor</h1>
         <label for="pizza-size">Your name or nickname: </label>
         <input id="name" type="text" class="form-control" />
         <label for="pizza-size">Pick Your Size: </label>
@@ -32,7 +42,6 @@
         </select>
         <label for="pizza-size">Pick Your first topping: </label>
         <select id="first-topping" class="form-control">
-          <option disabled selected>Select a topping</option>
           <option value="No-topping">No-topping</option>
           <option value="Pepporoni">Pepporoni</option>
           <option value="Cheese">Cheese</option>
@@ -52,10 +61,22 @@
           <option value="Cheese">Cheese</option>
           <option value="Pineapple">Pineapple</option>
         </select>
+        <label for="pizza-size"> Soft-Drinks: </label>
+        <select id="third-topping" class="form-control">
+          <option value="No-topping">GingerAle</option>
+          <option value="Pepporoni">Pepsi</option>
+          <option value="Cheese">Coke</option>
+          <option value="Pineapple">Sprite</option>
+        </select>
         <br />
         <button type="sybmit" class="btn btn-success btn-lg">
           Place Order!
         </button>
+      </div>
+      <div class="col-7">
+      <img  class= "chef"src="img/chef1.jpeg" alt="chef">
+      </div>
+    </div>
       </form>
     </div>
     <div id="output" class="hidden"></div>
