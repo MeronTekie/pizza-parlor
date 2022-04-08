@@ -1,4 +1,4 @@
-# Mr. Roboger's Neighborhood
+# Pizza-Parlor
 
 #### Meron G.Tekie
 
@@ -18,11 +18,11 @@
 
 ## Description
 
-This website is built to return the value of a given number in to count from zero up to the number given as an input and then converts numbers that contain 1,2,3 in to _"Beep!","Boop", and "Wont you be my neighbor?"_ respectively. And if the number contains 1 and 2 and/or 3 The application follows the hierarchical system and displays the string of the higher number
+The website is built to give customers a choice of their size of Pizza and it charges them according to the number of toppings they have selected in which per topping it is an additional 1.99.And it gives the flexibility for the customers to pick according to their choice and budget.
 
 ## Setup/Installation Requirements
 
-- Fork this [Github](https://github.com/MeronTekie/MrRogobers-Neighborhood.git) link and clone it to your machine
+- Fork this [Github](https://github.com/MeronTekie/pizza-parlor.git) link and clone it to your machine
 - Navigate through the directory
 - Select the index.html File
 - Click index.html file , you machine's browser (_Chrome is highly recommended_)should be able to run the file
